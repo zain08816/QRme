@@ -8,22 +8,34 @@
 
 import Foundation
 
-class QR {
+public class QR {
+    
+    func form_string() -> String {
         
-    var qrCodeString =
-    "BEGIN:VCARD \n" +
-    "VERSION:4.0 \n" +
-    "N:Peter;John \n" +
-    "FN:John Peter \n" +
-    "TITLE:Admin \n" +
-    "TEL;TYPE=cell:+91 431 524 2345 \n" +
-    "EMAIL::John@ommail.in \n" +
-    "URL:www.facebook.com \n" +
-    "URL: www.instagram.com \n" +
-    "ADR;WORK:;;423 ofce sales Center;Newark;DE;3243;USA \n" +
-    "END:VCARD"
-
-
+        let defaults = UserDefaults.standard
+        
+        let first_name = defaults.string(forKey: "first_name")!
+        let last_name = defaults.string(forKey: "last_name")!
+        let phone = defaults.string(forKey: "phone")!
+        let email = defaults.string(forKey: "email")!
+        let website = defaults.string(forKey: "website")!
+        let address = defaults.string(forKey: "address")!
+        
+        
+        let q =
+            "BEGIN:VCARD \n" +
+            "VERSION:2.1 \n" +
+            "N:\(last_name);\(first_name) \n" +
+            "FN:\(first_name) \(last_name) \n" +
+            "TEL;CELL;VOICE:\(phone) \n" +
+            "EMAIL:\(email) \n" +
+            "URL:\(website) \n" +
+            "ADR;HOME:\(address) \n" +
+            "END:VCARD"
+        
+        print(q)
+        return q
+    }
     
     
     
