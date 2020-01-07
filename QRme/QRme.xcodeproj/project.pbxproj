@@ -15,6 +15,7 @@
 		3B7140F223BE9167005A8562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7140F023BE9167005A8562 /* LaunchScreen.storyboard */; };
 		3B7517BB23C29C2B00D68329 /* DataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7517BA23C29C2B00D68329 /* DataInput.swift */; };
 		3B7517BD23C29DB700D68329 /* QRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7517BC23C29DB700D68329 /* QRUtility.swift */; };
+		3B7517C523C3F0E400D68329 /* QRImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7517C423C3F0E400D68329 /* QRImageGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3B7140F323BE9167005A8562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B7517BA23C29C2B00D68329 /* DataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInput.swift; sourceTree = "<group>"; };
 		3B7517BC23C29DB700D68329 /* QRUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRUtility.swift; sourceTree = "<group>"; };
+		3B7517C423C3F0E400D68329 /* QRImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRImageGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3B7140E523BE9165005A8562 /* AppDelegate.swift */,
 				3B7517BA23C29C2B00D68329 /* DataInput.swift */,
 				3B7140E923BE9165005A8562 /* ContentView.swift */,
+				3B7517C423C3F0E400D68329 /* QRImageGenerator.swift */,
 				3B7517BC23C29DB700D68329 /* QRUtility.swift */,
 				3B7140E723BE9165005A8562 /* SceneDelegate.swift */,
 				3B7140EB23BE9167005A8562 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 			files = (
 				3B7517BB23C29C2B00D68329 /* DataInput.swift in Sources */,
 				3B7140E623BE9165005A8562 /* AppDelegate.swift in Sources */,
+				3B7517C523C3F0E400D68329 /* QRImageGenerator.swift in Sources */,
 				3B7140E823BE9165005A8562 /* SceneDelegate.swift in Sources */,
 				3B7517BD23C29DB700D68329 /* QRUtility.swift in Sources */,
 				3B7140EA23BE9165005A8562 /* ContentView.swift in Sources */,
