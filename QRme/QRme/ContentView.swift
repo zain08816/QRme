@@ -12,7 +12,7 @@ struct ContentView: View {
     
     
     @State var name: String = ""
-    @State private var selection = 0
+    @State private var selection: Int = 0
     
     var body: some View {
         TabView(selection: $selection){
@@ -24,7 +24,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            QRImageGenerator()
                 .font(.title)
                 .tabItem {
                     VStack {
