@@ -26,13 +26,25 @@ struct QRImageGenerator: View {
             Image(uiImage: self.generateQRCode(from: str)!)
                 .resizable()
                 .scaledToFit()
-            
-            Button( action: {
-                self.str = QR().form_string()
-                print(self.str)
-            }) {
-                Text("Generate")
+            HStack {
+                Button( action: {
+                    self.str = QR().form_string()
+                    print(self.str)
+                }) {
+                    Text("Generate")
+                }
+                Spacer()
+                Spacer()
+                Button( action: {
+                    self.str = QR().form_string()
+                    guard let image = self.generateQRCode(from: self.str) else { return }
+                    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+                }) {
+                    Text("Save")
+                }
+                
             }
+            
 //            Text(QR().form_string())
         }
         
@@ -49,8 +61,8 @@ struct QRImageGenerator: View {
             if let outputImage = filter.outputImage,
                 let cgImage = CIContext().createCGImage(outputImage,
                                                         from: outputImage.extent) {
-                let size = CGSize(width: outputImage.extent.width * 5.0,
-                                  height: outputImage.extent.height * 5.0)
+                let size = CGSize(width: outputImage.extent.width * 8.0,
+                                  height: outputImage.extent.height * 8.0)
                 UIGraphicsBeginImageContext(size)
                 if let context = UIGraphicsGetCurrentContext() {
                     context.interpolationQuality = .none
