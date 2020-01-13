@@ -33,6 +33,13 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
+            DataUtility()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "airplane")
+                        Text("Data Input 2.0")
+                    }
+            }.tag(2)
         }.accentColor(.accentColor)
         
         
