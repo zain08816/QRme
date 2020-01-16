@@ -16,11 +16,20 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-            DataInput()
+//            DataInput()
+//                .tabItem {
+//                    VStack {
+//                         Image(systemName: "person.crop.square")
+//                        Text("Information")
+//                    }
+//                }
+//                .tag(0)
+            
+            DataUtility()
                 .tabItem {
                     VStack {
-                         Image(systemName: "person.crop.square")
-                        Text("Information")
+                        Image(systemName: "airplane")
+                        Text("Data Input 2.0")
                     }
                 }
                 .tag(0)
@@ -33,13 +42,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
-            DataUtility()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "airplane")
-                        Text("Data Input 2.0")
-                    }
-            }.tag(2)
+
         }.accentColor(.accentColor)
         
         
