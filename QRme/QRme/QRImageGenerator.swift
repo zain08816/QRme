@@ -21,6 +21,10 @@ struct QRImageGenerator: View {
         }
     }
     
+    let gradient = LinearGradient(gradient: Gradient(colors:
+        [Color("ColorDarkAccent"), Color("ColorLightAccent")]), startPoint:
+        .topLeading, endPoint: .bottomTrailing)
+    
     var body: some View {
         VStack {
             Image(uiImage: self.generateQRCode(from: str)!)
@@ -32,8 +36,9 @@ struct QRImageGenerator: View {
                     print(self.str)
                 }) {
                     Text("Generate")
+                    .padding()
                 }
-                Spacer()
+                .background(RoundedRectangle(cornerRadius: 15).opacity(0.2))
                 Spacer()
                 Button( action: {
                     self.str = QR().form_string()
@@ -41,7 +46,9 @@ struct QRImageGenerator: View {
                     UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
                 }) {
                     Text("Save")
+                    .padding()
                 }
+                .background(RoundedRectangle(cornerRadius: 15).opacity(0.2))
                 
             }
             
