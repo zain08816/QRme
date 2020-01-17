@@ -45,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B63720C23D14F3500BFFFA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BE6972023CD246A00FA10AA /* DataUtility.swift */,
+				3B7517C423C3F0E400D68329 /* QRImageGenerator.swift */,
+				3B7140E923BE9165005A8562 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3B7140D923BE9164005A8562 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +74,9 @@
 		3B7140E423BE9164005A8562 /* QRme */ = {
 			isa = PBXGroup;
 			children = (
-				3B7140E923BE9165005A8562 /* ContentView.swift */,
-				3B7517BA23C29C2B00D68329 /* DataInput.swift */,
-				3BE6972023CD246A00FA10AA /* DataUtility.swift */,
-				3B7517C423C3F0E400D68329 /* QRImageGenerator.swift */,
+				3B63720C23D14F3500BFFFA4 /* Views */,
 				3B7517BC23C29DB700D68329 /* QRUtility.swift */,
+				3B7517BA23C29C2B00D68329 /* DataInput.swift */,
 				3B7140E723BE9165005A8562 /* SceneDelegate.swift */,
 				3B7140EB23BE9167005A8562 /* Assets.xcassets */,
 				3B7140F023BE9167005A8562 /* LaunchScreen.storyboard */,
