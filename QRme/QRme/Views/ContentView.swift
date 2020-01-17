@@ -28,8 +28,8 @@ struct ContentView: View {
             DataUtility()
                 .tabItem {
                     VStack {
-                        Image(systemName: "airplane")
-                        Text("Data Input 2.0")
+                        Image(systemName: "person.crop.square")
+                        Text("Data Input")
                     }
                 }
                 .tag(0)

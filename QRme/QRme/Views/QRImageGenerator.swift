@@ -12,6 +12,7 @@ import Combine
 
 struct QRImageGenerator: View {
     @State private var str = ""
+
     
     var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
@@ -26,6 +27,7 @@ struct QRImageGenerator: View {
         .topLeading, endPoint: .bottomTrailing)
     
     var body: some View {
+        
         VStack {
             Image(uiImage: self.generateQRCode(from: str)!)
                 .resizable()
@@ -40,6 +42,7 @@ struct QRImageGenerator: View {
                 }
                 .background(RoundedRectangle(cornerRadius: 15).opacity(0.2))
                 Spacer()
+                
                 Button( action: {
                     self.str = QR().form_string()
                     guard let image = self.generateQRCode(from: self.str) else { return }
@@ -49,7 +52,6 @@ struct QRImageGenerator: View {
                     .padding()
                 }
                 .background(RoundedRectangle(cornerRadius: 15).opacity(0.2))
-                
             }
             
 //            Text(QR().form_string())

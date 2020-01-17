@@ -19,7 +19,7 @@ struct DataUtility: View {
     @State private var address = ""
 //    @State private var name = Array<String>.init(repeating: "", count: 6)
     
-    
+    @State private var ShowModal = false
     
     
     
@@ -41,6 +41,7 @@ struct DataUtility: View {
                               text: $address).textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 Section {
+                    
                     Button(action: {
                         
                         let defaults = UserDefaults.standard
@@ -62,6 +63,16 @@ struct DataUtility: View {
                     }) {
                         Text("Save")
                     }
+                    
+                    Button( action: {
+                        self.ShowModal.toggle()
+                    }) {
+                        Text("popup")
+                    }.sheet(isPresented: $ShowModal) {
+                        QRImageGenerator()
+                    }
+                    
+                    
                 }
                 
                 
